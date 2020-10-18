@@ -27,7 +27,7 @@ export class Game {
                 location = '/'
             }
             return
-        }
+        };
 
         
         requestAnimationFrame(obj_game.main);
@@ -44,18 +44,18 @@ export class Game {
         snake.update(); 
         food.update();
         this.checkDeath();
-    }
+    };
 
     game_draw() {
         gameBoard.innerHTML = '';
         snake.draw(gameBoard);
         food.draw(gameBoard);
 
-    } 
+    };
     
     checkDeath() {
         gameOver = grid.outsideGrid(snake.getSnakeHead()) || snake.snakeIntersection();
-    }
+    };
     
 }
 
