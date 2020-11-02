@@ -70,5 +70,3 @@ export class Snake {
         newSegments = 0;
     }
 }
-
-const obj_snake = new Snake();

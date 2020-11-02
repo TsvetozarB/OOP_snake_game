@@ -16,5 +16,3 @@ export class Grid {
         );
     }
 }
-
-const obj_grid = new Grid();
