@@ -14,7 +14,7 @@ export class Game {
     constructor() {
     }
 
-    main(currentTime) {
+    main = (currentTime) => {
         time = currentTime;
 
         if (gameOver) {
@@ -30,14 +30,16 @@ export class Game {
         };
 
         
-        requestAnimationFrame(obj_game.main);
+        requestAnimationFrame(this.main);
         const secondsSinceLastRender = (time - lastRenderTime) / 1000;
-        if (secondsSinceLastRender < 1 / food.snakeSpeed) return
-    
+        if (secondsSinceLastRender < 1 / food.snakeSpeed) {
+            return
+        };
+        
         lastRenderTime = time;
         
-        obj_game.game_update();
-        obj_game.game_draw();
+        this.game_update();
+        this.game_draw();
     };
     
     game_update() {
